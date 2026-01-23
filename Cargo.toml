@@ -1,0 +1,14 @@
+[package]
+name = "rust-synth"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+
+[dependencies]
+cpal = "0.15"
+anyhow = "1"
+nih_plug = { git = "https://github.com/robbert-vdh/nih-plug.git" }
+nih_plug_egui = { git = "https://github.com/robbert-vdh/nih-plug.git" }
