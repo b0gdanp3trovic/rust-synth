@@ -12,3 +12,7 @@ cpal = "0.15"
 anyhow = "1"
 nih_plug = { git = "https://github.com/robbert-vdh/nih-plug.git" }
 nih_plug_egui = { git = "https://github.com/robbert-vdh/nih-plug.git" }
+
+[workspace]
+members = [".", "xtask"]
+
