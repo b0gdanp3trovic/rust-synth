@@ -1,6 +1,6 @@
 use std::{num::NonZeroU32, sync::Arc};
 
-use nih_plug::{buffer::Buffer, midi::NoteEvent, params::Params, plugin::{Plugin, ProcessStatus}, prelude::{AudioIOLayout, AuxiliaryBuffers, BufferConfig, InitContext, ProcessContext, Vst3Plugin, Vst3SubCategory}};
+use nih_plug::{buffer::Buffer, midi::{MidiConfig, NoteEvent}, params::Params, plugin::{Plugin, ProcessStatus}, prelude::{AudioIOLayout, AuxiliaryBuffers, BufferConfig, InitContext, ProcessContext, Vst3Plugin, Vst3SubCategory}};
 
 use crate::synth::MonoSynth;
 
@@ -22,6 +22,8 @@ impl Plugin for MonoSynthPlugin {
     const URL: &'static str = "";
     const EMAIL: &'static str = "";
     const VERSION: &'static str = "0.1.0";
+
+    const MIDI_INPUT: MidiConfig = MidiConfig::Basic;
 
     const AUDIO_IO_LAYOUTS: &'static [AudioIOLayout] = &[
         AudioIOLayout {
